@@ -1,0 +1,25 @@
+<section>
+    <h2>Goods</h2>
+    <div>
+        <div>
+            <label>Category</label>
+            <select data-bind="options: categories, optionsText: 'title', value: category, optionsCaption: 'Choose category...', event: { change: refresh }"></select>
+        </div>
+        <table class="table">
+            <thead>
+                <th>#</th>
+                <th>Title</th>
+            </thead>
+            <tbody data-bind="foreach: items">
+                <tr>
+                    <td>
+                        <span data-bind="text: $index"></span>
+                    </td>
+                    <td>
+                        <a data-bind="text: title"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
